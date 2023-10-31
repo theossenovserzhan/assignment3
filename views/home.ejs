@@ -1,0 +1,43 @@
+<head>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body style="background-color: #EBDFA5;">
+    <% texts.forEach((text, index) => { %>
+        <ul class="note-list"> 
+            <li> 
+                <div class="note-content"> 
+                    <% if (text.text.length > 100) { %>
+                        <p class="note-text initial-text-<%= index %>"><%= text.text.substring(0, 100) %>...</p>
+                        <p class="note-text full-text-<%= index %>" style="display: none;"><%= text.text %></p>
+                        <button class="read-more" data-index="<%= index %>">Read more</button>
+                    <% } else { %>
+                        <p class="note-text"><%= text.text %></p>
+                    <% } %>
+                    <span class="date"><%= text.date %></span>
+                </div> 
+            </li>
+        </ul> 
+    <% }); %> 
+    <div class="return-button">
+        <a href="/main" class="backbutton">Back to Main Page</a>
+    </div>
+    <script>
+        const readMoreButtons = document.querySelectorAll('.read-more');
+        readMoreButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const index = this.getAttribute('data-index');
+                const initialText = document.querySelector(`.initial-text-${index}`);
+                const fullText = document.querySelector(`.full-text-${index}`);
+                if (initialText.style.display !== 'none') {
+                    initialText.style.display = 'none';
+                    fullText.style.display = 'block';
+                    this.innerText = 'Read less';
+                } else {
+                    initialText.style.display = 'block';
+                    fullText.style.display = 'none';
+                    this.innerText = 'Read more';
+                }
+            });
+        });
+    </script>
+</body>

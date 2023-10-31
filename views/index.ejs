@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="opacity">
+    <div class="center2">
+        <div class="top-center">
+            <div class="form-container">
+                <h1 style="width: 440px; margin-left: 250px;"><%= message %></h1>
+                <form style = "margin-left: 250px; width: 440px;"action="/" method="post">
+                    <input type="radio" name="category" value="home"> Home
+                    <input type="radio" name="category" value="work"> Work
+                    <input type="radio" name="category" value="relationships"> Relationships
+                    <br>
+                    <textarea class='box-size' name="inputText"></textarea>
+                    <button class='addbutton' type="submit">Publish</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    .form-container {
+        display: inline-block;
+        width: 50%;
+        margin-top: 2px;
+        margin-left: 25%;
+    }
+    .box-size {
+        height: 100px;
+        width: 280px;
+    }
+    .custom-button {
+        margin-left: 15%;
+    }
+</style>

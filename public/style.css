@@ -1,0 +1,66 @@
+
+.opacity{
+    background-image: url(notes.jpg);
+    background-size: contain; /* or use other values: contain, auto, etc. */
+    background-repeat: repeat; /* Prevents image repetition */
+    background-attachment: fixed; /* Fixes the image while scrolling */
+}
+.center {
+    background-color: aliceblue;
+    opacity: 0.8;
+    display: flex;
+    margin-left: 320px;
+    margin-top:300px;
+    width: 830px;
+}
+.center2 {
+    background-color: aliceblue;
+    opacity: 0.8;
+    display: flex;
+    margin-left: 220px;
+    margin-top:300px;
+    width: 1100px;
+}
+.addbutton {
+    margin-top: 10px;
+    margin-left: 690px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    background: linear-gradient(#710cd0 0%, #400785 100%);
+    border: 1px solid #510a3d;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+.note-content {
+    background-color: whitesmoke;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: relative;
+}
+.return-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.backbutton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    background: #2a94e2;
+    border: 1px solid #2a94e2;
+    transition: background 0.3s ease;
+}
+.back-button:hover {
+    background: #4eb5f1;
+}
